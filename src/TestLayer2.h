@@ -5,7 +5,7 @@
 #define OFX_LAYER_DEFINE_LAYER_CLASS(Klass) public: const char* getClassName() const { return #Klass; } \
 unsigned int getClassID() const { return ofx::Layer::Type2Int<Klass>::value(); }
 
-#define NUM 64
+#define NUM 5
 
 class TestLayer2 : public ofxLayer::Layer{
 public:
@@ -22,6 +22,7 @@ public:
     int green;
     int blue;
     float alpha;
+    
     int waiting_1;
     int waiting_2;
     int waiting_3;

@@ -3,37 +3,35 @@
 //--------------------------------------------------------------------------------------------------------------
 void TestLayer3::setup(){
     
-    x = -10;
+    x = -100;
     y = -10;
-    img.loadImage("taikan.jpg");
-    centX = -250;
-    centY = -250;
-    radius = 100;
+    speedX = 0.2;
+    speedY = 0.2;
+    img.loadImage("gyokudo.jpg");
+    //    pixels = img.getPixels();
     
 }
 //--------------------------------------------------------------------------------------------------------------
 void TestLayer3::update(){
     
-    ang += 0.1;
+    x += speedX;
+    y += speedY;
+    
+    if (x >= 0 || x <= -360) {
+        speedX = speedX*-1;
+    }
+    if (y >= 0 || y <= -354) {
+        speedY = speedY*-1;
+    }
     
 }
 //--------------------------------------------------------------------------------------------------------------
 void TestLayer3::draw(){
-
+    
     ofEnableAlphaBlending();
     ofBackground(255,255,255,0);
     
-    if (ang > 0 && ang < 360) {
-        x = centX + (radius * cos(ang*3.141592/180));
-        y = centY + (radius * sin(ang*3.141592/180));
-    }
-    
-    if (ang > 360) {
-        ang = 0;
-    }
-    
-    ofSetColor(100, 180, 100, 255);
-    ofRect(0, 0, ofGetWidth(), ofGetHeight());
-//    img.draw(x, y, ofGetWidth()*1.5, ofGetHeight()*1.5);
+//   ofSetColor(200, 200, 50, 255);
+//   img.draw(x, y, img.width, img.height);
     
 }

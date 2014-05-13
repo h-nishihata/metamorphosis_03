@@ -7,16 +7,12 @@ class pen{
     
 public:
     
-    float centx;
-    float centy;
-    int radius;
-    int ang;
-    int rotate;
-    float x, y;
-    int lastx, lasty;
+    int centx;
+    int centy;
+    int ox;
+    int oy;
     
-    float radiusNoise;
-    float spiral;
+    int identify;
     int waitCnt;
     int step;
 
@@ -27,7 +23,7 @@ public:
     bool flag;
     int a;
     int waiting;
-    int sw;
+    
     int speedX;
     int speedY;
     
@@ -38,16 +34,14 @@ public:
     void setR(int red);
     void setG(int green);
     void setB(int blue);
-    void setX(int posX);
-//    void setY(int posY);
-    float ox;
+    void setID(int ID);
     
-//    int maxcon;
+    int maxcon;
     int numcon;
+    
     void connectTo(int f);
     int connections[10];
     bool friendOf(int x);
-
 
 };
 

@@ -15,14 +15,12 @@ public:
     void setup();
     void update();
     void draw();
-  
-    float centX;
-    float centY;
-    int radius;
+    
     float x;
     float y;
-    float ang;
-
-    ofImage img;
+    float speedX;
+    float speedY;
     
+    ofImage img;
+
 };
