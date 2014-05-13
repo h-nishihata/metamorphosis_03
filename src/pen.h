@@ -38,9 +38,8 @@ public:
     
     int maxcon;
     int numcon;
-    
+    int connections[];
     void connectTo(int f);
-    int connections[10];
     bool friendOf(int x);
 
 };

@@ -25,25 +25,25 @@ void TestLayer2::setup(){
     alpha = 60;
     end_0 = true;
     end_1 = true;
+
+        for (int k=0; k<NUM*2.2; k++) {
+            int a = ofRandom(NUM);
+            int b = (a + ofRandom(22));
     
-    //    for (int k=0; k<NUM*2.2; k++) {
-    //        int a = ofRandom(NUM);
-    //        int b = (a + ofRandom(22));
-    //
-    //        if (b > NUM) {
-    //            b = 0;
-    //        }else if (b < 0){
-    //            b = 0;
-    //        }
-    //        if (a != b) {
-    //            pens[a].connectTo(b);
-    //            pens[b].connectTo(a);
-    //        }
+            if (b > NUM) {
+                b = 0;
+            }else if (b < 0){
+                b = 0;
+            }
+            if (a != b) {
+                pens[a].connectTo(b);
+                pens[b].connectTo(a);
+            }
     
-    //    //    cout << b << endl;
-    //    //        cout << a << " made friends with " << b <<endl;
-    //    //    }
-    
+//           cout << b << endl;
+           cout << a << " made friends with " << b <<endl;
+    }
+
     //        for (int j=0; j<NUM; j++) {
     //            cout << pens[j].centx << endl;
     //        }
