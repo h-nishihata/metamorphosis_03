@@ -23,8 +23,9 @@ pen::pen(){
         speedY = 1;
     }
     
-    maxcon = 10;
-    connections[maxcon];
+//    maxcon = 10;
+//    connections[maxcon];
+
 }
 //--------------------------------------------------------------
 void pen::setup(){
@@ -116,71 +117,74 @@ void pen::draw(){
         }
         
         //  **********
-        float p = ofRandom(1.0);
-        float g = ofRandom(0.01, 0.1);
-        g += ofRandom(-0.050, 0.050);
-        
-        float maxg = 0.22;
-        
-        if (g < -maxg) {
-            g = -maxg;
-        }else if (g > maxg){
-            g = maxg;
-        }
-        
-        float w =g/10.0;
-        
+//        float p = ofRandom(1.0);
+//        float g = ofRandom(0.01, 0.1);
+//        g += ofRandom(-0.050, 0.050);
+//        
+//        float maxg = 0.22;
+//        
+//        if (g < -maxg) {
+//            g = -maxg;
+//        }else if (g > maxg){
+//            g = maxg;
+//        }
+//        
+//        float w =g/10.0;
+    
         for (int n=0; n <= 4; n++) {
             ox = this[n].centx;
             oy = this[n].centy;
+            for (int s=0; s<numsands; s++) {
+                sands[s].render(centy, centy, ox, oy);
+            }
             //        cout << n << " : " << this[n].centx << endl;
             //        if( ox == 0){
             //            ox = ofRandom(0,1440);
             //        }else if(oy == 0){
             //            oy = ofRandom(0,900);
             //        }
-            ofSetColor(255);
-            if( ox != 0 && oy != 0){
-                ofCircle(ox+(centx-ox)*sin(p),
-                         oy+(centy-oy)*sin(p), 1);
-                
-                
-                
-                for (int i=0; i<11; i++) {
-                    //        ofSetColor(r, g, b, a);
-                    ofSetColor(0,255,255);
-                    ofCircle(ox+(centx-ox)*sin(p + sin(i*w)),
-                             oy+(centy-oy)*sin(p + sin(i*w)), 1);
-                }
-            }
+            ofSetColor(0,255,255);
+//            if( ox != 0 && oy != 0){
+//                ofCircle(ox+(centx-ox)*sin(p),
+//                         oy+(centy-oy)*sin(p), 1);
+//                
+//                
+//                
+//                for (int i=0; i<11; i++) {
+//                    //        ofSetColor(r, g, b, a);
+//
+//                    ofCircle(ox+(centx-ox)*sin(p + sin(i*w)),
+//                             oy+(centy-oy)*sin(p + sin(i*w)), 1);
+//                }
+//            }
         }
         
 //    }
 }
 
 //--------------------------------------------------------------
-void pen::connectTo(int f){
-    
-    if (numcon < maxcon) {
-        if (! friendOf(f)) {
-            connections[numcon] = f;
-            numcon++;
-        }
-    }
-    
-}
-
-//--------------------------------------------------------------
-bool pen::friendOf(int x){
-    
-    bool isFriend = false;
-    for (int n=0; n<numcon; n++) {
-        if (connections[n] == x) {
-            isFriend = true;
-        }
-    }
-    return isFriend;
-    
-}
-
-
+//void pen::connectTo(int f){
+//    
+//    if (numcon < maxcon) {
+//        if (! friendOf(f)) {
+//            connections[numcon] = f;
+//            numcon++;
+//        }
+//    }
+//    
+//}
+//
+////--------------------------------------------------------------
+//bool pen::friendOf(int x){
+//    
+//    bool isFriend = false;
+//    for (int n=0; n<numcon; n++) {
+//        if (connections[n] == x) {
+//            isFriend = true;
+//        }
+//    }
+//    return isFriend;
+//    
+//}
+//
+//

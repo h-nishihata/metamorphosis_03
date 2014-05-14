@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		731A5BFF1923700700101536 /* sandPainter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 731A5BFD1923700700101536 /* sandPainter.cpp */; };
 		73442C4F190A599700538F1A /* pen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73442C4D190A599700538F1A /* pen.cpp */; };
 		73E3936B1915B8910025C9E2 /* ofxLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73E393641915B8910025C9E2 /* ofxLayer.cpp */; };
 		73E3936C1915B8910025C9E2 /* ofxLayerManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73E393671915B8910025C9E2 /* ofxLayerManager.cpp */; };
@@ -65,6 +66,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		731A5BFD1923700700101536 /* sandPainter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sandPainter.cpp; sourceTree = "<group>"; };
+		731A5BFE1923700700101536 /* sandPainter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sandPainter.h; sourceTree = "<group>"; };
 		73442C4D190A599700538F1A /* pen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pen.cpp; sourceTree = "<group>"; };
 		73442C4E190A599700538F1A /* pen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pen.h; sourceTree = "<group>"; };
 		73E393641915B8910025C9E2 /* ofxLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxLayer.cpp; sourceTree = "<group>"; };
@@ -226,6 +229,8 @@
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
 				73442C4D190A599700538F1A /* pen.cpp */,
 				73442C4E190A599700538F1A /* pen.h */,
+				731A5BFD1923700700101536 /* sandPainter.cpp */,
+				731A5BFE1923700700101536 /* sandPainter.h */,
 				73E393751915B9010025C9E2 /* TestLayer1.cpp */,
 				73E393761915B9010025C9E2 /* TestLayer1.h */,
 				73E393781915B93E0025C9E2 /* TestLayer2.cpp */,
@@ -335,6 +340,7 @@
 				73E3937A1915B93E0025C9E2 /* TestLayer2.cpp in Sources */,
 				73442C4F190A599700538F1A /* pen.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				731A5BFF1923700700101536 /* sandPainter.cpp in Sources */,
 				73E3936B1915B8910025C9E2 /* ofxLayer.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 				73E3936C1915B8910025C9E2 /* ofxLayerManager.cpp in Sources */,

@@ -25,7 +25,7 @@ void TestLayer2::setup(){
     alpha = 60;
     end_0 = true;
     end_1 = true;
-
+/*
         for (int k=0; k<NUM*2.2; k++) {
             int a = ofRandom(NUM);
             int b = (a + ofRandom(22));
@@ -47,7 +47,7 @@ void TestLayer2::setup(){
     //        for (int j=0; j<NUM; j++) {
     //            cout << pens[j].centx << endl;
     //        }
-    
+*/    
 }
 //--------------------------------------------------------------------------------------------------------------
 void TestLayer2::update(){

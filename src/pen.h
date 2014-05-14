@@ -1,8 +1,10 @@
 #ifndef _OF_PEN
 #define _OF_PEN
 
-#include "ofMain.h"
+#define numsands 3
 
+#include "ofMain.h"
+#include "sandPainter.h"
 class pen{
     
 public:
@@ -36,12 +38,14 @@ public:
     void setB(int blue);
     void setID(int ID);
     
-    int maxcon;
-    int numcon;
-    int connections[];
-    void connectTo(int f);
-    bool friendOf(int x);
+//    int maxcon;
+//    int numcon;
+//    int connections[];
+//    void connectTo(int f);
+//    bool friendOf(int x);
 
+    sandPainter sands[numsands];
+    
 };
 
 #endif
