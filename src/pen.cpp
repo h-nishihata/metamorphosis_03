@@ -23,9 +23,9 @@ pen::pen(){
         speedY = 1;
     }
     
-//    maxcon = 10;
-//    connections[maxcon];
-
+    //    maxcon = 10;
+    //    connections[maxcon];
+    
 }
 //--------------------------------------------------------------
 void pen::setup(){
@@ -47,24 +47,24 @@ void pen::setB(int blue){
 }
 
 //--------------------------------------------------------------
-//void pen::setID(int ID){
-//    identify = ID;
-//}
+void pen::setID(int ID){
+    identify = ID;
+}
 
 //--------------------------------------------------------------
 void pen::update(){
     
-    //    if (flag == false) {
-    //        col+=0.1;
-    //        if(col > 200){
-    //            flag = true;
-    //        }
-    //    }else if (flag == true){
-    //        col-=0.1;
-    //        if(col < 0){
-    //            flag = false;
-    //        }
-    //    }
+    if (flag == false) {
+        col+=0.1;
+        if(col > 200){
+            flag = true;
+        }
+    }else if (flag == true){
+        col-=0.1;
+        if(col < 0){
+            flag = false;
+        }
+    }
     
     centx += speedX;
     centy += speedY;
@@ -80,6 +80,38 @@ void pen::update(){
 //--------------------------------------------------------------
 void pen::draw(){
     
+    float ax = 0.0;
+    float ay = 0.0;
+    int lencon = ofRandom(50)+10;
+    
+    for (int n=0; n<10; n++) {
+        
+        float ddx = this[n].centx-centx;
+        float ddy = this[n].centy-centy;
+        float d = sqrt(ddx*ddx + ddy*ddy);
+        float t = atan2(ddy,ddx);
+        
+        if (this[n].identify > identify) {
+            
+            if (d>lencon) {
+                ax += 4.0*cos(t);
+                ay += 4.0*sin(t);
+            }
+        } else {
+            
+            if (d<lencon) {
+                ax += (lencon-d)*cos(t+PI);
+                ay += (lencon-d)*sin(t+PI);
+            }
+        }
+        
+    }
+    
+    speedX += ax/42.22;
+    speedY += ay/42.22;
+    
+    // ********************
+    
     ofEnableSmoothing();
     ofEnableAlphaBlending();
     
@@ -94,97 +126,68 @@ void pen::draw(){
 //    }
 //    else {
     
-        //    ofSetColor(255, 0, 255);
-        //    ofCircle(centx, centy, 20);
-        
-        
         for (int dx=-2; dx<3; dx++) {
-            //            ofSetColor(r+50, g+50, b, a);
-            ofSetColor(255,0,0);
+            ofSetColor(r+50, g+50, b, a);
             ofCircle(centx+dx, centy, 1);
-            //            ofSetColor(r-50, g-50, b, a);
-            ofSetColor(0,255,0);
+            
+            ofSetColor(r-50, g-50, b, a);
             ofCircle(centx+dx-1, centy-1, 1);
         }
         
         for (int dy=-2; dy<3; dy++) {
-            //            ofSetColor(r+20, g+20, b, a);
-            ofSetColor(0,0,255);
+            ofSetColor(r+20, g+20, b, a);
             ofCircle(centx, centy+dy, 1);
-            //            ofSetColor(r-20, g-20, b, a);
-            ofSetColor(255,255,0);
+            
+            ofSetColor(r-20, g-20, b, a);
             ofCircle(centx-1, centy+dy-1, 1);
         }
         
         //  **********
-//        float p = ofRandom(1.0);
-//        float g = ofRandom(0.01, 0.1);
-//        g += ofRandom(-0.050, 0.050);
-//        
-//        float maxg = 0.22;
-//        
-//        if (g < -maxg) {
-//            g = -maxg;
-//        }else if (g > maxg){
-//            g = maxg;
-//        }
-//        
-//        float w =g/10.0;
-    
-        for (int n=0; n <= 4; n++) {
+        
+        for (int n=0; n <= 10; n++) {
             ox = this[n].centx;
             oy = this[n].centy;
-            for (int s=0; s<numsands; s++) {
-                sands[s].render(centy, centy, ox, oy);
-            }
+            
             //        cout << n << " : " << this[n].centx << endl;
             //        if( ox == 0){
             //            ox = ofRandom(0,1440);
             //        }else if(oy == 0){
             //            oy = ofRandom(0,900);
             //        }
-            ofSetColor(0,255,255);
-//            if( ox != 0 && oy != 0){
-//                ofCircle(ox+(centx-ox)*sin(p),
-//                         oy+(centy-oy)*sin(p), 1);
-//                
-//                
-//                
-//                for (int i=0; i<11; i++) {
-//                    //        ofSetColor(r, g, b, a);
-//
-//                    ofCircle(ox+(centx-ox)*sin(p + sin(i*w)),
-//                             oy+(centy-oy)*sin(p + sin(i*w)), 1);
-//                }
-//            }
+            
+            for (int s=0; s<numsands; s++) {
+                ofSetColor(r,g,b);
+                sands[s].render(centy, centy, ox, oy);
+            }
+            
         }
         
 //    }
 }
+/*
+ //--------------------------------------------------------------
+ void pen::connectTo(int f){
+ 
+ if (numcon < maxcon) {
+ if (! friendOf(f)) {
+ connections[numcon] = f;
+ numcon++;
+ }
+ }
+ 
+ }
+ 
+ //--------------------------------------------------------------
+ bool pen::friendOf(int x){
+ 
+ bool isFriend = false;
+ for (int n=0; n<numcon; n++) {
+ if (connections[n] == x) {
+ isFriend = true;
+ }
+ }
+ return isFriend;
+ 
+ }
+ */
 
-//--------------------------------------------------------------
-//void pen::connectTo(int f){
-//    
-//    if (numcon < maxcon) {
-//        if (! friendOf(f)) {
-//            connections[numcon] = f;
-//            numcon++;
-//        }
-//    }
-//    
-//}
-//
-////--------------------------------------------------------------
-//bool pen::friendOf(int x){
-//    
-//    bool isFriend = false;
-//    for (int n=0; n<numcon; n++) {
-//        if (connections[n] == x) {
-//            isFriend = true;
-//        }
-//    }
-//    return isFriend;
-//    
-//}
-//
-//

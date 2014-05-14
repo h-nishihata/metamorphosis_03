@@ -1,16 +1,10 @@
-//
-//  sandPainter.h
-//  metamorphosis_03
-//
-//  Created by Lancelot on 2014/05/14.
-//
-//
-
 #ifndef SANDPAINTER
 #define SANDPAINTER
 
 #include "ofMain.h"
+
 class sandPainter{
+    
 public:
     sandPainter();
     void setup();
