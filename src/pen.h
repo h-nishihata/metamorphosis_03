@@ -1,7 +1,7 @@
 #ifndef _OF_PEN
 #define _OF_PEN
 
-#define numsands 3
+#define numsands 10
 
 #include "ofMain.h"
 #include "sandPainter.h"
@@ -11,10 +11,13 @@ public:
     
     int centx;
     int centy;
+    float speedX;
+    float speedY;
+    int identify;
     int ox;
     int oy;
-    
-    int identify;
+    bool flag_p;
+
     int waitCnt;
     int step;
 
@@ -25,9 +28,6 @@ public:
     bool flag;
     int a;
     int waiting;
-    
-    int speedX;
-    int speedY;
     
     pen();
     void setup();

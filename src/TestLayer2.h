@@ -15,6 +15,7 @@ public:
     void setup();
     void update();
     void draw();
+//    void fading(int r, int g, int b, int a);
     
     unsigned char* pixels;
     int pos;
