@@ -30,7 +30,7 @@ void TestLayer3::draw(){
     ofEnableAlphaBlending();
     ofBackground(255,255,255,0);
     
-   ofSetColor(220,220,150);
-   img.draw(x, y, img.width, img.height);
+    ofSetColor(200,200,150);
+    img.draw(x, y, img.width, img.height);
     
 }

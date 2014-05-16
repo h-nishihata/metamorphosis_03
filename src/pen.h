@@ -16,7 +16,8 @@ public:
     int identify;
     int ox;
     int oy;
-    bool flag_p;
+    int time;
+    bool flag_t;
 
     int waitCnt;
     int step;

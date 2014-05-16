@@ -6,7 +6,7 @@ void ofApp::setup(){
     ofEnableAlphaBlending();
     ofSetVerticalSync(true);
     ofBackground(30);
-    ofSetFrameRate(10);
+    ofSetFrameRate(20);
     mng.setup(1440,900);
     
     layer1 = mng.createLayer<TestLayer1>();

@@ -141,6 +141,7 @@ void TestLayer2::draw(){
             end_0 = end_1 = true;
         }
     }
+    
     /*
      for (int m=0; m<NUM; m++) {
      for (int n=0; n<pens[m].numcon; n++) {
@@ -157,6 +158,7 @@ void TestLayer2::draw(){
      }
      }
      */
+    
     ofSetColor(150, 150, 50, alpha);
     ofRect(0,0,ofGetWidth(),ofGetHeight());
     processFbo.end();
