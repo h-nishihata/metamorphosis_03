@@ -105,7 +105,7 @@ void TestLayer2::draw(){
     
     // elase all
     if (end_2 == true) {
-        if (waiting_3 < 100) {
+        if (waiting_3 < 1000) {
             waiting_3++;
         }else{
             end_1 = false;
@@ -133,7 +133,7 @@ void TestLayer2::draw(){
     
     // reset
     if (end_4 == true) {
-        if (waiting_5 < 700) {
+        if (waiting_5 < 1000) {
             waiting_5++;
         }else{
             waiting_1 = waiting_2 = waiting_3 = waiting_4 = waiting_5 = 0;
@@ -159,7 +159,7 @@ void TestLayer2::draw(){
      }
      */
     
-    ofSetColor(150, 150, 50, alpha);
+    ofSetColor(255, 255, 100, alpha);
     ofRect(0,0,ofGetWidth(),ofGetHeight());
     processFbo.end();
     

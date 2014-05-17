@@ -13,9 +13,6 @@ pen::pen(){
     a = ofRandom(0, 255);
     waiting = ofRandom(0,80);
     
-    //    speedX = 10;
-    //    speedY = 10;
-    
     //    maxcon = 10;
     //    connections[maxcon];
     
@@ -48,19 +45,29 @@ void pen::setID(int ID){
 void pen::update(){
     
     time++;
-    /*
-     if (flag == false) {
-     col+=0.1;
-     if(col > 200){
-     flag = true;
-     }
-     }else if (flag == true){
-     col-=0.1;
-     if(col < 0){
-     flag = false;
-     }
-     }
-     */
+    
+    if (flag == false) {
+        r+=0.1;
+        g+=0.1;
+        b+=0.1;
+        if(r>=255 || g>=255 || b>=25){
+            flag = true;
+        }
+    }else if (flag == true){
+        r-=0.1;
+        g-=0.1;
+        b-=0.1;
+        if(r<=0 || g<=0 || b<=0){
+            flag = false;
+        }
+    }
+    
+    if(waiting < 80){
+        waiting++;
+    }else{
+        if(a > 0){ a --; }else{ a = 255;}
+    }
+
     
     //  **********
     
@@ -69,11 +76,9 @@ void pen::update(){
     centy += speedY;
     
     if (centx >= 1440 || centx <= 0) {
-        //        speedX = speedX*-1;
         centx = ofRandom(1440);
     }
     if (centy >= 900 || centy <= 0) {
-        //        speedY = speedY*-1;
         centy = ofRandom(900);
     }
     
@@ -81,7 +86,7 @@ void pen::update(){
     float ay = 0.0;
     int lencon = ofRandom(50)+10;
     
-    for (int n=0; n<10; n++) {
+    for (int n=0; n<10; n++) { // 10
         
         float ddx = this[n].centx-centx;
         float ddy = this[n].centy-centy;
@@ -97,17 +102,17 @@ void pen::update(){
         } else {
             
             if (d<lencon) {
-                ax += (lencon-d)/10 *cos(t+PI); //(lencon-d)/10 *
-                ay += (lencon-d)/10 *sin(t+PI);
+                ax += (lencon-d)/10 * cos(t+PI); //(lencon-d)/10 *
+                ay += (lencon-d)/10 * sin(t+PI);
             }
         }
         
     }
     
-
+    
     if (flag_t == false) {
         
-        speedX += ax/500; //100
+        speedX += ax/500; //500
         speedY += ay/500;
         if(time > 200){
             flag_t = true;
@@ -115,7 +120,7 @@ void pen::update(){
         
     }else if (flag_t == true){
         
-        speedX -= ax/500; //100
+        speedX -= ax/500; //500
         speedY -= ay/500;
         if(time > 400){
             flag_t = false;
@@ -123,9 +128,9 @@ void pen::update(){
         }
         
     }
-
-    speedX *= 0.99;
-    speedY *= 0.99;
+    
+    speedX *= 0.95; // *= 0.95
+    speedY *= 0.95;
     
     if (speedX == speedY) {
         speedX += ofRandom(-0.1, 0.1);
@@ -139,7 +144,6 @@ void pen::update(){
     if (speedY == 0) {
         speedY = ofRandom(-0.1, 0.1);
     }
-    
 }
 
 //--------------------------------------------------------------
@@ -148,48 +152,40 @@ void pen::draw(){
     ofEnableSmoothing();
     ofEnableAlphaBlending();
     
-    
-    if(waiting < 80){
-        waiting++;
-    }else{
-        if(a > 0){ a --; }else{ a = 255;}
-    }
-    
-    
     if (step < waitCnt) {
         step++;
     }
     else {
         
         for (int dx=-2; dx<3; dx++) {
-            ofSetColor(r+20,g+20,b+20,a);
+            ofSetColor(r+50,g+50,b+50,a);
             ofCircle(centx+dx, centy, 1);
             
-            ofSetColor(r-20,g-20,b-20,a);
+            ofSetColor(r+40,g+40,b+40,a);
             ofCircle(centx+dx-1, centy-1, 1);
         }
         
         for (int dy=-2; dy<3; dy++) {
-            ofSetColor(r+50,g+50,b+50,a);
+            ofSetColor(r+30,g+30,b+30,a);
             ofCircle(centx, centy+dy, 1);
             
-            ofSetColor(r-50,g-50,b-50,a);
+            ofSetColor(r+20,g+20,b+20,a);
             ofCircle(centx-1, centy+dy-1, 1);
         }
         
         
         //  **********
-
-        for (int n=0; n <= 10; n++) {
+        
+        for (int n=0; n <= 1; n++) { // 1
             ox = this[n].centx;
             oy = this[n].centy;
             
             for (int s=0; s<numsands; s++) {
-                ofSetColor(r,g,b);
+                ofSetColor(r+10, g+10, b+10,a);
                 sands[s].render(centy, centy, ox, oy);
             }
         }
-
+        
     }
 }
 

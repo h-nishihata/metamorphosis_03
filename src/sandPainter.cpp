@@ -38,7 +38,7 @@ void sandPainter::render(float x, float y, float ox, float oy){
         ofCircle(ox+(x-ox)*sin(p),
                  oy+(y-oy)*sin(p), 1);
         
-        for (int i=0; i<10; i++) {
+        for (int i=0; i<5; i++) {
             ofCircle(ox+(x-ox)*sin(p + sin(i*w)),
                      oy+(y-oy)*sin(p + sin(i*w)), 1);
         }

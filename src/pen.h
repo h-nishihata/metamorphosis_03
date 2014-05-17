@@ -1,7 +1,7 @@
 #ifndef _OF_PEN
 #define _OF_PEN
 
-#define numsands 10
+#define numsands 10 // 10
 
 #include "ofMain.h"
 #include "sandPainter.h"
