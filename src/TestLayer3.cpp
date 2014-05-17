@@ -5,8 +5,8 @@ void TestLayer3::setup(){
     
     x = -100;
     y = -10;
-    speedX = 0.1;
-    speedY = 0.1;
+    speedX = 0.15;
+    speedY = 0.15;
     img.loadImage("gyokudo.jpg");
     
 }
@@ -30,7 +30,7 @@ void TestLayer3::draw(){
     ofEnableAlphaBlending();
     ofBackground(0,0,0,0);
     
-    ofSetColor(200,200,150);
+    ofSetColor(255,230,30);
     img.draw(x, y, img.width, img.height);
     
 }

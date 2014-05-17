@@ -114,7 +114,7 @@ void pen::update(){
         
         speedX += ax/500; //500
         speedY += ay/500;
-        if(time > 200){
+        if(time > 300){
             flag_t = true;
         }
         
@@ -122,7 +122,7 @@ void pen::update(){
         
         speedX -= ax/500; //500
         speedY -= ay/500;
-        if(time > 400){
+        if(time > 800){
             flag_t = false;
             time = 0;
         }
