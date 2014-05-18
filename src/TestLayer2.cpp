@@ -159,7 +159,7 @@ void TestLayer2::draw(){
      }
      */
     
-    ofSetColor(255, 255, 100, alpha);
+    ofSetColor(255, 255, 30, alpha);
     ofRect(0,0,ofGetWidth(),ofGetHeight());
     processFbo.end();
     

@@ -158,18 +158,18 @@ void pen::draw(){
     else {
         
         for (int dx=-2; dx<3; dx++) {
-            ofSetColor(r+50,g+50,b+50,a);
+            ofSetColor(r+80,g+80,b+80,a);
             ofCircle(centx+dx, centy, 1);
             
-            ofSetColor(r+40,g+40,b+40,a);
+            ofSetColor(r+70,g+70,b+70,a);
             ofCircle(centx+dx-1, centy-1, 1);
         }
         
         for (int dy=-2; dy<3; dy++) {
-            ofSetColor(r+30,g+30,b+30,a);
+            ofSetColor(r+60,g+60,b+60,a);
             ofCircle(centx, centy+dy, 1);
             
-            ofSetColor(r+20,g+20,b+20,a);
+            ofSetColor(r+50,g+50,b+50,a);
             ofCircle(centx-1, centy+dy-1, 1);
         }
         
@@ -181,7 +181,7 @@ void pen::draw(){
             oy = this[n].centy;
             
             for (int s=0; s<numsands; s++) {
-                ofSetColor(r+10, g+10, b+10,a);
+                ofSetColor(r+40, g+40, b+40,a);
                 sands[s].render(centy, centy, ox, oy);
             }
         }
