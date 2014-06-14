@@ -7,7 +7,7 @@ void TestLayer3::setup(){
     y = -10;
     speedX = 0.15;
     speedY = 0.15;
-    img.loadImage("gyokudo.jpg");
+    img.loadImage("tanyu.jpg");
     
 }
 //--------------------------------------------------------------------------------------------------------------
@@ -16,10 +16,10 @@ void TestLayer3::update(){
     x += speedX;
     y += speedY;
     
-    if (x >= 0 || x <= -360) {
+    if (x >= 0 || x <= -1790) {
         speedX = speedX*-1;
     }
-    if (y >= 0 || y <= -354) {
+    if (y >= 0 || y <= -184) {
         speedY = speedY*-1;
     }
     
@@ -30,7 +30,7 @@ void TestLayer3::draw(){
     ofEnableAlphaBlending();
     ofBackground(0,0,0,0);
     
-    ofSetColor(255,230,30);
+    ofSetColor(150,150,30);
     img.draw(x, y, img.width, img.height);
     
 }

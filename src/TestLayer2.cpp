@@ -3,15 +3,15 @@
 //--------------------------------------------------------------------------------------------------------------
 void TestLayer2::setup(){
     
-    fbo.allocate(1800, 1254);
+    fbo.allocate(3236, 1084);
     processFbo.allocate(1800, 1254);
     
-    image.loadImage("gyokudo.jpg");
+    image.loadImage("tanyu.jpg");
     pixels = image.getPixels();
     
     for (int i=0; i<NUM; i++) {
         
-        pos = pens[i].centy * 1800 + pens[i].centx;
+        pos = pens[i].centy * 3230 + pens[i].centx;
         red = pixels[pos *3];
         green = pixels[pos *3 +1];
         blue =  pixels[pos *3 +2];
@@ -25,30 +25,6 @@ void TestLayer2::setup(){
     alpha = 60;
     end_0 = true;
     end_1 = true;
-    
-    /*
-     for (int k=0; k<NUM*2.2; k++) {
-     int a = ofRandom(NUM);
-     int b = (a + ofRandom(22));
-     
-     if (b > NUM) {
-     b = 0;
-     }else if (b < 0){
-     b = 0;
-     }
-     if (a != b) {
-     pens[a].connectTo(b);
-     pens[b].connectTo(a);
-     }
-     
-     cout << b << endl;
-     cout << a << " made friends with " << b <<endl;
-     }
-     
-     for (int j=0; j<NUM; j++) {
-     cout << pens[j].centx << endl;
-     }
-     */
 
 }
 //--------------------------------------------------------------------------------------------------------------
@@ -142,24 +118,7 @@ void TestLayer2::draw(){
         }
     }
     
-    /*
-     for (int m=0; m<NUM; m++) {
-     for (int n=0; n<pens[m].numcon; n++) {
-     int fP[n];
-     fP[n] = pens[m].connections[n];
-     pen otherPen;
-     otherPen =  pens[pens[m].connections[n]];
-     float ox = pens[fP[n]].centx;
-     float oy = pens[fP[n]].centy;
-     
-     ofCircle(ox+(pens[m].centx-ox)*sin(ofRandom(1)),
-     oy+(pens[m].centy-oy)*sin(ofRandom(1)), 10);
-     
-     }
-     }
-     */
-    
-    ofSetColor(255, 255, 30, alpha);
+    ofSetColor(255, 255, 30, 1);
     ofRect(0,0,ofGetWidth(),ofGetHeight());
     processFbo.end();
     

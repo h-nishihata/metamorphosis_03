@@ -9,19 +9,22 @@ class pen{
     
 public:
     
+    //  stroke
     int centx;
     int centy;
-    float speedX;
-    float speedY;
     int identify;
     int ox;
     int oy;
     int time;
     bool flag_t;
+    float speedX;
+    float speedY;
 
     int waitCnt;
     int step;
 
+    
+    //  colors
     int r;
     int g;
     int b;
@@ -30,6 +33,8 @@ public:
     int a;
     int waiting;
     
+    
+    //  functions
     pen();
     void setup();
     void update();
@@ -38,12 +43,6 @@ public:
     void setG(int green);
     void setB(int blue);
     void setID(int ID);
-    
-//    int maxcon;
-//    int numcon;
-//    int connections[];
-//    void connectTo(int f);
-//    bool friendOf(int x);
 
     sandPainter sands[numsands];
     

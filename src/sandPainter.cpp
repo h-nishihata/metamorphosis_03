@@ -44,4 +44,5 @@ void sandPainter::render(float x, float y, float ox, float oy){
         }
         
     }
+    
 }

@@ -8,13 +8,10 @@ pen::pen(){
     waitCnt = ofRandom(0, 300);
     step = 0;
     
-    col = 0;
     flag = false;
     a = ofRandom(0, 255);
     waiting = ofRandom(0,80);
     
-    //    maxcon = 10;
-    //    connections[maxcon];
     
 }
 //--------------------------------------------------------------
@@ -44,8 +41,6 @@ void pen::setID(int ID){
 //--------------------------------------------------------------
 void pen::update(){
     
-    time++;
-    
     if (flag == false) {
         r+=0.1;
         g+=0.1;
@@ -67,11 +62,11 @@ void pen::update(){
     }else{
         if(a > 0){ a --; }else{ a = 255;}
     }
-
-    
-    //  **********
     
     
+    //  *****   add velocity to position    *****
+    
+    time++;
     centx += speedX;
     centy += speedY;
     
@@ -82,11 +77,12 @@ void pen::update(){
         centy = ofRandom(900);
     }
     
+    
     float ax = 0.0;
     float ay = 0.0;
     int lencon = ofRandom(50)+10;
     
-    for (int n=0; n<10; n++) { // 10
+    for (int n=0; n<10; n++) {
         
         float ddx = this[n].centx-centx;
         float ddy = this[n].centy-centy;
@@ -97,12 +93,12 @@ void pen::update(){
             
             if (d>lencon) {
                 ax += 10.0 * cos(t);
-                ay += 10.0 * sin(t); // 10.0
+                ay += 10.0 * sin(t);
             }
         } else {
             
             if (d<lencon) {
-                ax += (lencon-d)/10 * cos(t+PI); //(lencon-d)/10 *
+                ax += (lencon-d)/10 * cos(t+PI);
                 ay += (lencon-d)/10 * sin(t+PI);
             }
         }
@@ -112,7 +108,7 @@ void pen::update(){
     
     if (flag_t == false) {
         
-        speedX += ax/500; //500
+        speedX += ax/500;
         speedY += ay/500;
         if(time > 300){
             flag_t = true;
@@ -120,7 +116,7 @@ void pen::update(){
         
     }else if (flag_t == true){
         
-        speedX -= ax/500; //500
+        speedX -= ax/500;
         speedY -= ay/500;
         if(time > 800){
             flag_t = false;
@@ -129,8 +125,10 @@ void pen::update(){
         
     }
     
-    speedX *= 0.95; // *= 0.95
+    
+    speedX *= 0.95;
     speedY *= 0.95;
+    
     
     if (speedX == speedY) {
         speedX += ofRandom(-0.1, 0.1);
@@ -144,6 +142,7 @@ void pen::update(){
     if (speedY == 0) {
         speedY = ofRandom(-0.1, 0.1);
     }
+    
 }
 
 //--------------------------------------------------------------
@@ -173,10 +172,7 @@ void pen::draw(){
             ofCircle(centx-1, centy+dy-1, 1);
         }
         
-        
-        //  **********
-        
-        for (int n=0; n <= 1; n++) { // 1
+        for (int n=0; n <= 1; n++) {
             ox = this[n].centx;
             oy = this[n].centy;
             
@@ -188,31 +184,3 @@ void pen::draw(){
         
     }
 }
-
-/*
- //--------------------------------------------------------------
- void pen::connectTo(int f){
- 
- if (numcon < maxcon) {
- if (! friendOf(f)) {
- connections[numcon] = f;
- numcon++;
- }
- }
- 
- }
- 
- //--------------------------------------------------------------
- bool pen::friendOf(int x){
- 
- bool isFriend = false;
- for (int n=0; n<numcon; n++) {
- if (connections[n] == x) {
- isFriend = true;
- }
- }
- return isFriend;
- 
- }
- */
-
