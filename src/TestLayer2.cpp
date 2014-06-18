@@ -3,15 +3,15 @@
 //--------------------------------------------------------------------------------------------------------------
 void TestLayer2::setup(){
     
-    fbo.allocate(3236, 1084);
-    processFbo.allocate(1800, 1254);
+    fbo.allocate(1440, 900);
+    processFbo.allocate(1440, 900);
     
     image.loadImage("tanyu.jpg");
     pixels = image.getPixels();
     
     for (int i=0; i<NUM; i++) {
         
-        pos = pens[i].centy * 3230 + pens[i].centx;
+        pos = pens[i].centy * 3135 + pens[i].centx;
         red = pixels[pos *3];
         green = pixels[pos *3 +1];
         blue =  pixels[pos *3 +2];
@@ -72,10 +72,12 @@ void TestLayer2::draw(){
         }else{
             end_0 = false;
             end_2 = true;
-//            fading(0,0,0,0);
-            if (alpha > 0) {
-                alpha-=5;
-            }
+//            int x = ofRandom(1440);
+//            int y = ofRandom(900);
+//            for (int s=0; s<1000; s++) {
+//                ofSetColor(211, 204, 97, 30);
+//                ofCircle(x, y, 10);
+//            }
         }
     }
     
@@ -95,21 +97,18 @@ void TestLayer2::draw(){
     
     // phase 2
     if (end_3 == true) {
-        if (waiting_4 < 100) {
+        if (waiting_4 < 1000) {
             waiting_4++;
         }else{
-            end_2 = false;
-            end_4 = true;
-//            fading(255,255,0,50);
-            if (alpha > 0) {
-                alpha-=5;
-            }
+            waiting_1 = waiting_2 = waiting_3 = waiting_4 = waiting_5 = 0;
+            end_2 = end_3 = end_4 = false;
+            end_0 = end_1 = true;
         }
     }
     
     // reset
     if (end_4 == true) {
-        if (waiting_5 < 1000) {
+        if (waiting_5 < 100) {
             waiting_5++;
         }else{
             waiting_1 = waiting_2 = waiting_3 = waiting_4 = waiting_5 = 0;
@@ -118,8 +117,8 @@ void TestLayer2::draw(){
         }
     }
     
-    ofSetColor(255, 255, 30, 1);
-    ofRect(0,0,ofGetWidth(),ofGetHeight());
+//    ofSetColor(255, 255, 30, alpha);
+//    ofRect(0,0,ofGetWidth(),ofGetHeight());
     processFbo.end();
     
     

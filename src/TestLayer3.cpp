@@ -16,10 +16,10 @@ void TestLayer3::update(){
     x += speedX;
     y += speedY;
     
-    if (x >= 0 || x <= -1790) {
+    if (x >= 0 || x <= -1695) {
         speedX = speedX*-1;
     }
-    if (y >= 0 || y <= -184) {
+    if (y >= 0 || y <= -168) {
         speedY = speedY*-1;
     }
     

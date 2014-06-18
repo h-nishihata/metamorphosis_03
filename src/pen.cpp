@@ -8,6 +8,11 @@ pen::pen(){
     waitCnt = ofRandom(0, 300);
     step = 0;
     
+    if (ofRandom(99) >= 50) {
+        setEraser = true;
+    }else{
+        setEraser = false;
+    }
     flag = false;
     a = ofRandom(0, 255);
     waiting = ofRandom(0,80);
@@ -60,7 +65,7 @@ void pen::update(){
     if(waiting < 80){
         waiting++;
     }else{
-        if(a > 0){ a --; }else{ a = 255;}
+        if(a > 0){ a --; }else{ a = 255; }
     }
     
     
@@ -80,7 +85,7 @@ void pen::update(){
     
     float ax = 0.0;
     float ay = 0.0;
-    int lencon = ofRandom(50)+10;
+    int lencon = (r+g+b)/3;
     
     for (int n=0; n<10; n++) {
         
@@ -110,7 +115,7 @@ void pen::update(){
         
         speedX += ax/500;
         speedY += ay/500;
-        if(time > 300){
+        if(time > r+g+b-100){
             flag_t = true;
         }
         
@@ -118,7 +123,7 @@ void pen::update(){
         
         speedX -= ax/500;
         speedY -= ay/500;
-        if(time > 800){
+        if(time > r+g+b){
             flag_t = false;
             time = 0;
         }
@@ -128,7 +133,10 @@ void pen::update(){
     
     speedX *= 0.95;
     speedY *= 0.95;
-    
+    if (ofRandom(1000)>990) {
+        speedX += ofRandom(3) - ofRandom(3);
+        speedY += ofRandom(3) - ofRandom(3);
+    }
     
     if (speedX == speedY) {
         speedX += ofRandom(-0.1, 0.1);
@@ -151,36 +159,43 @@ void pen::draw(){
     ofEnableSmoothing();
     ofEnableAlphaBlending();
     
-    if (step < waitCnt) {
-        step++;
+//    if (step < waitCnt) {
+//        step++;
+//    }
+//    else {
+    
+//        for (int dx=-2; dx<3; dx++) {
+//            ofSetColor(r+80,g+80,b+80,a);
+//            ofCircle(centx+dx, centy, 1);
+//            
+//            ofSetColor(r+70,g+70,b+70,a);
+//            ofCircle(centx+dx-1, centy-1, 1);
+//        }
+//        
+//        for (int dy=-2; dy<3; dy++) {
+//            ofSetColor(r+60,g+60,b+60,a);
+//            ofCircle(centx, centy+dy, 1);
+//            
+//            ofSetColor(r+50,g+50,b+50,a);
+//            ofCircle(centx-1, centy+dy-1, 1);
+//        }
+    if (setEraser) {
+        ofSetColor(0, 0, 0, 1);
+    }else{
+        ofSetColor(r+40, g+40, b+40,a);
     }
-    else {
-        
-        for (int dx=-2; dx<3; dx++) {
-            ofSetColor(r+80,g+80,b+80,a);
-            ofCircle(centx+dx, centy, 1);
-            
-            ofSetColor(r+70,g+70,b+70,a);
-            ofCircle(centx+dx-1, centy-1, 1);
-        }
-        
-        for (int dy=-2; dy<3; dy++) {
-            ofSetColor(r+60,g+60,b+60,a);
-            ofCircle(centx, centy+dy, 1);
-            
-            ofSetColor(r+50,g+50,b+50,a);
-            ofCircle(centx-1, centy+dy-1, 1);
-        }
-        
+
+    
+    
         for (int n=0; n <= 1; n++) {
             ox = this[n].centx;
             oy = this[n].centy;
             
             for (int s=0; s<numsands; s++) {
-                ofSetColor(r+40, g+40, b+40,a);
+//                ofSetColor(r+40, g+40, b+40,a);
                 sands[s].render(centy, centy, ox, oy);
             }
         }
         
-    }
+//      }
 }

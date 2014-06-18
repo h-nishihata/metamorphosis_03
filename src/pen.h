@@ -25,6 +25,7 @@ public:
 
     
     //  colors
+    bool setEraser;
     int r;
     int g;
     int b;
