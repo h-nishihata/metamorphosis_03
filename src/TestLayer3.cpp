@@ -3,8 +3,8 @@
 //--------------------------------------------------------------------------------------------------------------
 void TestLayer3::setup(){
     
-    x = -100;
-    y = -10;
+//    x = -100;
+//    y = -10;
     speedX = 0.15;
     speedY = 0.15;
     img.loadImage("tanyu.jpg");
@@ -14,9 +14,9 @@ void TestLayer3::setup(){
 void TestLayer3::update(){
     
     x += speedX;
-    y += speedY;
+//    y += speedY;
     
-    if (x >= 0 || x <= -1695) {
+    if (x >= 0 || x <= -20) {
         speedX = speedX*-1;
     }
     if (y >= 0 || y <= -168) {
@@ -31,6 +31,6 @@ void TestLayer3::draw(){
     ofBackground(0,0,0,0);
     
     ofSetColor(150,150,30);
-    img.draw(x, y, img.width, img.height);
+    img.draw(x, y, 3511, 1200);
     
 }

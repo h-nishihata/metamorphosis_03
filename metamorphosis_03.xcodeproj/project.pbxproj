@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		731A5BFF1923700700101536 /* sandPainter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 731A5BFD1923700700101536 /* sandPainter.cpp */; };
 		73442C4F190A599700538F1A /* pen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73442C4D190A599700538F1A /* pen.cpp */; };
-		73E3936B1915B8910025C9E2 /* ofxLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73E393641915B8910025C9E2 /* ofxLayer.cpp */; };
-		73E3936C1915B8910025C9E2 /* ofxLayerManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73E393671915B8910025C9E2 /* ofxLayerManager.cpp */; };
 		73E393771915B9010025C9E2 /* TestLayer1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73E393751915B9010025C9E2 /* TestLayer1.cpp */; };
 		73E3937A1915B93E0025C9E2 /* TestLayer2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73E393781915B93E0025C9E2 /* TestLayer2.cpp */; };
 		73E393801915B9F40025C9E2 /* TestLayer3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73E3937E1915B9F40025C9E2 /* TestLayer3.cpp */; };
+		846976D51977BD040010C4F1 /* ofxLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 846976D01977BD040010C4F1 /* ofxLayer.cpp */; };
+		846976D61977BD040010C4F1 /* ofxLayerManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 846976D31977BD040010C4F1 /* ofxLayerManager.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
@@ -70,17 +70,17 @@
 		731A5BFE1923700700101536 /* sandPainter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sandPainter.h; sourceTree = "<group>"; };
 		73442C4D190A599700538F1A /* pen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pen.cpp; sourceTree = "<group>"; };
 		73442C4E190A599700538F1A /* pen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pen.h; sourceTree = "<group>"; };
-		73E393641915B8910025C9E2 /* ofxLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxLayer.cpp; sourceTree = "<group>"; };
-		73E393651915B8910025C9E2 /* ofxLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxLayer.h; sourceTree = "<group>"; };
-		73E393661915B8910025C9E2 /* ofxLayerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxLayerConstants.h; sourceTree = "<group>"; };
-		73E393671915B8910025C9E2 /* ofxLayerManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxLayerManager.cpp; sourceTree = "<group>"; };
-		73E393681915B8910025C9E2 /* ofxLayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxLayerManager.h; sourceTree = "<group>"; };
 		73E393751915B9010025C9E2 /* TestLayer1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestLayer1.cpp; sourceTree = "<group>"; };
 		73E393761915B9010025C9E2 /* TestLayer1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestLayer1.h; sourceTree = "<group>"; };
 		73E393781915B93E0025C9E2 /* TestLayer2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestLayer2.cpp; sourceTree = "<group>"; };
 		73E393791915B93E0025C9E2 /* TestLayer2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestLayer2.h; sourceTree = "<group>"; };
 		73E3937E1915B9F40025C9E2 /* TestLayer3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestLayer3.cpp; sourceTree = "<group>"; };
 		73E3937F1915B9F40025C9E2 /* TestLayer3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestLayer3.h; sourceTree = "<group>"; };
+		846976D01977BD040010C4F1 /* ofxLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxLayer.cpp; sourceTree = "<group>"; };
+		846976D11977BD040010C4F1 /* ofxLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxLayer.h; sourceTree = "<group>"; };
+		846976D21977BD040010C4F1 /* ofxLayerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxLayerConstants.h; sourceTree = "<group>"; };
+		846976D31977BD040010C4F1 /* ofxLayerManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxLayerManager.cpp; sourceTree = "<group>"; };
+		846976D41977BD040010C4F1 /* ofxLayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxLayerManager.h; sourceTree = "<group>"; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
@@ -133,23 +133,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		73E393531915B8910025C9E2 /* ofxLayer-master */ = {
+		846976CE1977BD040010C4F1 /* ofxLayer-master */ = {
 			isa = PBXGroup;
 			children = (
-				73E393631915B8910025C9E2 /* src */,
+				846976CF1977BD040010C4F1 /* src */,
 			);
 			name = "ofxLayer-master";
-			path = "../../../../of_v0.8.0_osx_release/addons/ofxLayer-master";
+			path = "../../../addons/ofxLayer-master";
 			sourceTree = "<group>";
 		};
-		73E393631915B8910025C9E2 /* src */ = {
+		846976CF1977BD040010C4F1 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				73E393641915B8910025C9E2 /* ofxLayer.cpp */,
-				73E393651915B8910025C9E2 /* ofxLayer.h */,
-				73E393661915B8910025C9E2 /* ofxLayerConstants.h */,
-				73E393671915B8910025C9E2 /* ofxLayerManager.cpp */,
-				73E393681915B8910025C9E2 /* ofxLayerManager.h */,
+				846976D01977BD040010C4F1 /* ofxLayer.cpp */,
+				846976D11977BD040010C4F1 /* ofxLayer.h */,
+				846976D21977BD040010C4F1 /* ofxLayerConstants.h */,
+				846976D31977BD040010C4F1 /* ofxLayerManager.cpp */,
+				846976D41977BD040010C4F1 /* ofxLayerManager.h */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -157,7 +157,7 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
-				73E393531915B8910025C9E2 /* ofxLayer-master */,
+				846976CE1977BD040010C4F1 /* ofxLayer-master */,
 			);
 			name = addons;
 			sourceTree = "<group>";
@@ -340,12 +340,12 @@
 				73E3937A1915B93E0025C9E2 /* TestLayer2.cpp in Sources */,
 				73442C4F190A599700538F1A /* pen.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				846976D61977BD040010C4F1 /* ofxLayerManager.cpp in Sources */,
 				731A5BFF1923700700101536 /* sandPainter.cpp in Sources */,
-				73E3936B1915B8910025C9E2 /* ofxLayer.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
-				73E3936C1915B8910025C9E2 /* ofxLayerManager.cpp in Sources */,
 				73E393771915B9010025C9E2 /* TestLayer1.cpp in Sources */,
 				73E393801915B9F40025C9E2 /* TestLayer3.cpp in Sources */,
+				846976D51977BD040010C4F1 /* ofxLayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

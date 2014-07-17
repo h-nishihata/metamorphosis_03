@@ -2,8 +2,8 @@
 
 pen::pen(){
     
-    centx = ofRandom(1440);
-    centy = ofRandom(900);
+    centx = ofRandom(1920);
+    centy = ofRandom(1200);
     
     waitCnt = ofRandom(0, 300);
     step = 0;
@@ -14,7 +14,7 @@ pen::pen(){
         setEraser = false;
     }
     flag = false;
-    a = ofRandom(0, 255);
+    a = ofRandom(100, 255);
     waiting = ofRandom(0,80);
     
     
@@ -62,11 +62,11 @@ void pen::update(){
         }
     }
     
-    if(waiting < 80){
-        waiting++;
-    }else{
-        if(a > 0){ a --; }else{ a = 255; }
-    }
+//    if(waiting < 80){
+//        waiting++;
+//    }else{
+//        if(a > 0){ a --; }else{ a = 255; }
+//    }
     
     
     //  *****   add velocity to position    *****
@@ -75,10 +75,10 @@ void pen::update(){
     centx += speedX;
     centy += speedY;
     
-    if (centx >= 1440 || centx <= 0) {
+    if (centx >= 1920 || centx <= 0) {
         centx = ofRandom(1440);
     }
-    if (centy >= 900 || centy <= 0) {
+    if (centy >= 1200 || centy <= 0) {
         centy = ofRandom(900);
     }
     

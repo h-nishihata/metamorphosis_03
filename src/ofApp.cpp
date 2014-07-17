@@ -7,7 +7,7 @@ void ofApp::setup(){
     ofSetVerticalSync(true);
     ofBackground(255,255,100);
     ofSetFrameRate(10);
-    mng.setup(1440,900);
+    mng.setup(1920,1200);
     
     layer1 = mng.createLayer<TestLayer1>();
     layer2 = mng.createLayer<TestLayer2>();
@@ -21,6 +21,8 @@ void ofApp::setup(){
     
     layer3->setVisible(true);
     layer3->setAlpha(255);
+    
+    ofHideCursor();
     
 }
 

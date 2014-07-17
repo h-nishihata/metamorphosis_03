@@ -3,8 +3,8 @@
 //--------------------------------------------------------------------------------------------------------------
 void TestLayer2::setup(){
     
-    fbo.allocate(1440, 900);
-    processFbo.allocate(1440, 900);
+    fbo.allocate(1920, 1200);
+//    processFbo.allocate(1440, 900);
     
     image.loadImage("tanyu.jpg");
     pixels = image.getPixels();
@@ -22,40 +22,49 @@ void TestLayer2::setup(){
         
     }
 
-    alpha = 60;
-    end_0 = true;
-    end_1 = true;
+    fbo.begin();
+	ofClear(255,255,255, 0);
+    fbo.end();
+    
+//    alpha = 60;
+//    end_0 = true;
+//    end_1 = true;
 
 }
 //--------------------------------------------------------------------------------------------------------------
 void TestLayer2::update(){
     
+    ofEnableAlphaBlending();
+    
+    fbo.begin();
     for (int i=0; i<NUM; i++) {
         pens[i].update();
     }
+    fbo.end();
     
 }
 //--------------------------------------------------------------------------------------------------------------
 void TestLayer2::draw(){
     
-    ofTranslate(0, 900);
+    ofTranslate(0, 1200);
     ofRotateX(180);
     
     
     
+//    fbo.begin();
+//    ofEnableAlphaBlending();
+//    ofBackground(0,0,0,0);
+//    processFbo.draw(0, 0);
+//    fbo.end();
+    
+    
+    
     fbo.begin();
-    ofEnableAlphaBlending();
-    ofBackground(0,0,0,0);
-    processFbo.draw(0, 0);
-    fbo.end();
-    
-    
-    
-    processFbo.begin();
     for (int i=0; i<NUM; i++) {
         pens[i].draw();
     }
     
+/*
     // setting
     if (end_0 == true) {
         waiting_1++;
@@ -116,14 +125,14 @@ void TestLayer2::draw(){
             end_0 = end_1 = true;
         }
     }
-    
+*/
 //    ofSetColor(255, 255, 30, alpha);
 //    ofRect(0,0,ofGetWidth(),ofGetHeight());
-    processFbo.end();
+    fbo.end();
     
     
 
-    ofSetHexColor(0xffffff);
+//    ofSetHexColor(0xffffff);
     fbo.draw(0,0);
 
 }
