@@ -1,20 +1,20 @@
 #pragma once
+
 #include "ofMain.h"
-#include "ofxLayer.h"
-#include "TestLayer1.h"
-#include "TestLayer2.h"
-#include "TestLayer3.h"
+#include "pen.h"
+#define NUM 100
 
 class ofApp : public ofBaseApp{
 public:
-    
     void setup();
     void update();
     void draw();
     
-    void keyPressed(int key);
+    void drawFboTest();
+    
+    void keyPressed  (int key);
     void keyReleased(int key);
-    void mouseMoved(int x, int y);
+    void mouseMoved(int x, int y );
     void mouseDragged(int x, int y, int button);
     void mousePressed(int x, int y, int button);
     void mouseReleased(int x, int y, int button);
@@ -22,10 +22,23 @@ public:
     void dragEvent(ofDragInfo dragInfo);
     void gotMessage(ofMessage msg);
     
-    TestLayer1 *layer1;
-    TestLayer2 *layer2;
-    TestLayer3 *layer3;
+    ofFbo rgbaFbo;
     
-    ofxLayer::Manager mng;
+    ofImage img;
     
+    unsigned char* pixels;
+    int pos;
+    int red;
+    int green;
+    int blue;
+    
+    int startDraw;
+    float fadeAmnt;
+    
+    float x;
+    float y;
+    float speedX;
+    float speedY;
+    
+    pen pens[NUM];
 };

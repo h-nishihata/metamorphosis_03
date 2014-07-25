@@ -7,13 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		731A5BFF1923700700101536 /* sandPainter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 731A5BFD1923700700101536 /* sandPainter.cpp */; };
-		73442C4F190A599700538F1A /* pen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73442C4D190A599700538F1A /* pen.cpp */; };
-		73E393771915B9010025C9E2 /* TestLayer1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73E393751915B9010025C9E2 /* TestLayer1.cpp */; };
-		73E3937A1915B93E0025C9E2 /* TestLayer2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73E393781915B93E0025C9E2 /* TestLayer2.cpp */; };
-		73E393801915B9F40025C9E2 /* TestLayer3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73E3937E1915B9F40025C9E2 /* TestLayer3.cpp */; };
-		846976D51977BD040010C4F1 /* ofxLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 846976D01977BD040010C4F1 /* ofxLayer.cpp */; };
-		846976D61977BD040010C4F1 /* ofxLayerManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 846976D31977BD040010C4F1 /* ofxLayerManager.cpp */; };
+		84E5A98D1982514400E7785A /* pen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84E5A9891982514400E7785A /* pen.cpp */; };
+		84E5A98E1982514400E7785A /* sandPainter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84E5A98B1982514400E7785A /* sandPainter.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
@@ -66,21 +61,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		731A5BFD1923700700101536 /* sandPainter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sandPainter.cpp; sourceTree = "<group>"; };
-		731A5BFE1923700700101536 /* sandPainter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sandPainter.h; sourceTree = "<group>"; };
-		73442C4D190A599700538F1A /* pen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pen.cpp; sourceTree = "<group>"; };
-		73442C4E190A599700538F1A /* pen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pen.h; sourceTree = "<group>"; };
-		73E393751915B9010025C9E2 /* TestLayer1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestLayer1.cpp; sourceTree = "<group>"; };
-		73E393761915B9010025C9E2 /* TestLayer1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestLayer1.h; sourceTree = "<group>"; };
-		73E393781915B93E0025C9E2 /* TestLayer2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestLayer2.cpp; sourceTree = "<group>"; };
-		73E393791915B93E0025C9E2 /* TestLayer2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestLayer2.h; sourceTree = "<group>"; };
-		73E3937E1915B9F40025C9E2 /* TestLayer3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestLayer3.cpp; sourceTree = "<group>"; };
-		73E3937F1915B9F40025C9E2 /* TestLayer3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestLayer3.h; sourceTree = "<group>"; };
-		846976D01977BD040010C4F1 /* ofxLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxLayer.cpp; sourceTree = "<group>"; };
-		846976D11977BD040010C4F1 /* ofxLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxLayer.h; sourceTree = "<group>"; };
-		846976D21977BD040010C4F1 /* ofxLayerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxLayerConstants.h; sourceTree = "<group>"; };
-		846976D31977BD040010C4F1 /* ofxLayerManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxLayerManager.cpp; sourceTree = "<group>"; };
-		846976D41977BD040010C4F1 /* ofxLayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxLayerManager.h; sourceTree = "<group>"; };
+		84E5A9891982514400E7785A /* pen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pen.cpp; sourceTree = "<group>"; };
+		84E5A98A1982514400E7785A /* pen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pen.h; sourceTree = "<group>"; };
+		84E5A98B1982514400E7785A /* sandPainter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sandPainter.cpp; sourceTree = "<group>"; };
+		84E5A98C1982514400E7785A /* sandPainter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sandPainter.h; sourceTree = "<group>"; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
@@ -91,7 +75,7 @@
 		E45BE9770E8CC7DD009D7055 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
 		E45BE9790E8CC7DD009D7055 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		E45BE97A0E8CC7DD009D7055 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
-		E4B69B5B0A3A1756003C02F2 /* metamorphosis_03Debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = metamorphosis_03Debug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B69B5B0A3A1756003C02F2 /* Metamorphosis_03Debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metamorphosis_03Debug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofApp.cpp; path = src/ofApp.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ofApp.h; path = src/ofApp.h; sourceTree = SOURCE_ROOT; };
@@ -133,31 +117,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		846976CE1977BD040010C4F1 /* ofxLayer-master */ = {
-			isa = PBXGroup;
-			children = (
-				846976CF1977BD040010C4F1 /* src */,
-			);
-			name = "ofxLayer-master";
-			path = "../../../addons/ofxLayer-master";
-			sourceTree = "<group>";
-		};
-		846976CF1977BD040010C4F1 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				846976D01977BD040010C4F1 /* ofxLayer.cpp */,
-				846976D11977BD040010C4F1 /* ofxLayer.h */,
-				846976D21977BD040010C4F1 /* ofxLayerConstants.h */,
-				846976D31977BD040010C4F1 /* ofxLayerManager.cpp */,
-				846976D41977BD040010C4F1 /* ofxLayerManager.h */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
-				846976CE1977BD040010C4F1 /* ofxLayer-master */,
 			);
 			name = addons;
 			sourceTree = "<group>";
@@ -217,7 +179,7 @@
 				E4EEC9E9138DF44700A80321 /* openFrameworks */,
 				BB4B014C10F69532006C3DED /* addons */,
 				E45BE5980E8CC70C009D7055 /* frameworks */,
-				E4B69B5B0A3A1756003C02F2 /* metamorphosis_03Debug.app */,
+				E4B69B5B0A3A1756003C02F2 /* Metamorphosis_03Debug.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -227,16 +189,10 @@
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
-				73442C4D190A599700538F1A /* pen.cpp */,
-				73442C4E190A599700538F1A /* pen.h */,
-				731A5BFD1923700700101536 /* sandPainter.cpp */,
-				731A5BFE1923700700101536 /* sandPainter.h */,
-				73E393751915B9010025C9E2 /* TestLayer1.cpp */,
-				73E393761915B9010025C9E2 /* TestLayer1.h */,
-				73E393781915B93E0025C9E2 /* TestLayer2.cpp */,
-				73E393791915B93E0025C9E2 /* TestLayer2.h */,
-				73E3937E1915B9F40025C9E2 /* TestLayer3.cpp */,
-				73E3937F1915B9F40025C9E2 /* TestLayer3.h */,
+				84E5A9891982514400E7785A /* pen.cpp */,
+				84E5A98A1982514400E7785A /* pen.h */,
+				84E5A98B1982514400E7785A /* sandPainter.cpp */,
+				84E5A98C1982514400E7785A /* sandPainter.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -253,9 +209,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E4B69B5A0A3A1756003C02F2 /* metamorphosis_03 */ = {
+		E4B69B5A0A3A1756003C02F2 /* Metamorphosis_03 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "metamorphosis_03" */;
+			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "Metamorphosis_03" */;
 			buildPhases = (
 				E4B69B580A3A1756003C02F2 /* Sources */,
 				E4B69B590A3A1756003C02F2 /* Frameworks */,
@@ -267,9 +223,9 @@
 			dependencies = (
 				E4EEB9AC138B136A00A80321 /* PBXTargetDependency */,
 			);
-			name = metamorphosis_03;
+			name = Metamorphosis_03;
 			productName = myOFApp;
-			productReference = E4B69B5B0A3A1756003C02F2 /* metamorphosis_03Debug.app */;
+			productReference = E4B69B5B0A3A1756003C02F2 /* Metamorphosis_03Debug.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -280,7 +236,7 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 			};
-			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "metamorphosis_03" */;
+			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "Metamorphosis_03" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -301,7 +257,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				E4B69B5A0A3A1756003C02F2 /* metamorphosis_03 */,
+				E4B69B5A0A3A1756003C02F2 /* Metamorphosis_03 */,
 			);
 		};
 /* End PBXProject section */
@@ -337,15 +293,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73E3937A1915B93E0025C9E2 /* TestLayer2.cpp in Sources */,
-				73442C4F190A599700538F1A /* pen.cpp in Sources */,
+				84E5A98D1982514400E7785A /* pen.cpp in Sources */,
+				84E5A98E1982514400E7785A /* sandPainter.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
-				846976D61977BD040010C4F1 /* ofxLayerManager.cpp in Sources */,
-				731A5BFF1923700700101536 /* sandPainter.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
-				73E393771915B9010025C9E2 /* TestLayer1.cpp in Sources */,
-				73E393801915B9F40025C9E2 /* TestLayer3.cpp in Sources */,
-				846976D51977BD040010C4F1 /* ofxLayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,7 +461,7 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_52)",
 				);
-				PRODUCT_NAME = metamorphosis_03Debug;
+				PRODUCT_NAME = Metamorphosis_03Debug;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -595,7 +546,7 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
 				);
-				PRODUCT_NAME = metamorphosis_03;
+				PRODUCT_NAME = Metamorphosis_03;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -603,7 +554,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "metamorphosis_03" */ = {
+		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "Metamorphosis_03" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4B69B4E0A3A1720003C02F2 /* Debug */,
@@ -612,7 +563,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "metamorphosis_03" */ = {
+		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "Metamorphosis_03" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4B69B600A3A1757003C02F2 /* Debug */,

@@ -8,16 +8,16 @@ pen::pen(){
     waitCnt = ofRandom(0, 300);
     step = 0;
     
-    if (ofRandom(99) >= 50) {
+    if (ofRandom(100) > 90) {
         setEraser = true;
     }else{
         setEraser = false;
     }
+    
     flag = false;
     a = ofRandom(100, 255);
     waiting = ofRandom(0,80);
-    
-    
+        
 }
 //--------------------------------------------------------------
 void pen::setup(){
@@ -57,16 +57,16 @@ void pen::update(){
         r-=0.1;
         g-=0.1;
         b-=0.1;
-        if(r<=0 || g<=0 || b<=0){
+        if(r<=60 || g<=60 || b<=60){
             flag = false;
         }
     }
     
-//    if(waiting < 80){
-//        waiting++;
-//    }else{
-//        if(a > 0){ a --; }else{ a = 255; }
-//    }
+    if(waiting < 80){
+        waiting++;
+    }else{
+        if(a > 0){ a -=0.1; }else{ a = 255; }
+    }
     
     
     //  *****   add velocity to position    *****
@@ -76,10 +76,12 @@ void pen::update(){
     centy += speedY;
     
     if (centx >= 1920 || centx <= 0) {
-        centx = ofRandom(1440);
+        centx = ofRandom(1920);
+        centy = ofRandom(1200);
     }
     if (centy >= 1200 || centy <= 0) {
-        centy = ofRandom(900);
+        centy = ofRandom(1200);
+        centy = ofRandom(1200);
     }
     
     
@@ -113,16 +115,16 @@ void pen::update(){
     
     if (flag_t == false) {
         
-        speedX += ax/500;
-        speedY += ay/500;
+        speedX += ax/200;
+        speedY += ay/200;
         if(time > r+g+b-100){
             flag_t = true;
         }
         
     }else if (flag_t == true){
         
-        speedX -= ax/500;
-        speedY -= ay/500;
+        speedX -= ax/200;
+        speedY -= ay/200;
         if(time > r+g+b){
             flag_t = false;
             time = 0;
@@ -133,14 +135,15 @@ void pen::update(){
     
     speedX *= 0.95;
     speedY *= 0.95;
+    
     if (ofRandom(1000)>990) {
         speedX += ofRandom(3) - ofRandom(3);
         speedY += ofRandom(3) - ofRandom(3);
     }
     
     if (speedX == speedY) {
-        speedX += ofRandom(-0.1, 0.1);
-        speedY += ofRandom(-0.1, 0.1);
+        speedX -= 0.1;
+        speedY += 0.1;
     }
     
     if (speedX == 0) {
@@ -179,8 +182,9 @@ void pen::draw(){
 //            ofSetColor(r+50,g+50,b+50,a);
 //            ofCircle(centx-1, centy+dy-1, 1);
 //        }
+
     if (setEraser) {
-        ofSetColor(0, 0, 0, 1);
+        ofSetColor(255, 255, 255, 0);
     }else{
         ofSetColor(r+40, g+40, b+40,a);
     }
