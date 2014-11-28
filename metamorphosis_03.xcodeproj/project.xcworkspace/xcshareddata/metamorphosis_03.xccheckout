@@ -5,48 +5,32 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>5A8C53B5-A083-4726-B3D9-9011E9AD32F2</string>
-	<key>IDESourceControlProjectName</key>
-	<string>Metamorphosis_03</string>
+	<string>30833451-6BBE-4CD5-93FF-CE2878CDD01F</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>F7767389-E373-4439-9D66-90BD80864514</key>
+		<key>93E336821D0A012F817EE65F4A2974E5DF1DA1B5</key>
 		<string>https://github.com/h-nishihata/metamorphosis_03</string>
-		<key>FC1A0E49-B9B7-4577-B611-9A86240A2DA0</key>
-		<string>https://github.com/h-nishihata/metamorphosis_05</string>
 	</dict>
-	<key>IDESourceControlProjectPath</key>
-	<string>Metamorphosis_03.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>F7767389-E373-4439-9D66-90BD80864514</key>
-		<string>../..</string>
-		<key>FC1A0E49-B9B7-4577-B611-9A86240A2DA0</key>
-		<string>../../../metamorphosis_05 のコピー</string>
+		<key>93E336821D0A012F817EE65F4A2974E5DF1DA1B5</key>
+		<string>metamorphosis_03</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/h-nishihata/metamorphosis_03</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>F7767389-E373-4439-9D66-90BD80864514</string>
+	<string>93E336821D0A012F817EE65F4A2974E5DF1DA1B5</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>F7767389-E373-4439-9D66-90BD80864514</string>
+			<string>93E336821D0A012F817EE65F4A2974E5DF1DA1B5</string>
 			<key>IDESourceControlWCCName</key>
 			<string>metamorphosis_03</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>FC1A0E49-B9B7-4577-B611-9A86240A2DA0</string>
-			<key>IDESourceControlWCCName</key>
-			<string>metamorphosis_05 のコピー</string>
 		</dict>
 	</array>
 </dict>
